@@ -10,5 +10,6 @@ class ActiveSupport::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  self.fixture_path = File.expand_path('../fixtures', __FILE__)
   include Capybara
 end
