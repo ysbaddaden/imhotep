@@ -1,0 +1,18 @@
+<h1><%= t('imhotep.pages.edit.heading') %></h1>
+
+<%= form_for @page, :url => { :action => :update }, :method => :put do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t('imhotep.pages.edit.save_btn') %>
+    <%= link_to t('imhotep.pages.edit.cancel_link'), :action => :show %>
+  </div>
+<% end %>

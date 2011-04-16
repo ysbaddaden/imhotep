@@ -1,0 +1,16 @@
+about:
+  name:  "about"
+  title: "About this website"
+  body:  "A few words about me and about this website."
+
+help:
+  name:  "help"
+  title: "Need some help?"
+  body:  "Do you need some help about this website? You've come to the right place!"
+
+howto:
+  path:  "help"
+  name:  "howto"
+  title: "Howto use this Help"
+  body:  "[TODO]"
+
