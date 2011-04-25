@@ -7,7 +7,7 @@ module Imhotep
         respond_with(@page)
       else
         respond_to do |format|
-          format.html { redirect_to :action => :edit }
+          format.html { redirect_to :action => :edit, :path => params[:path] }
           format.any  { head :not_found }
         end
       end

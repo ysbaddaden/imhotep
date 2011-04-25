@@ -16,6 +16,11 @@ class PagesControllerTest < ActionController::TestCase
     assert_redirected_to edit_page_url(:name => "faq")
   end
 
+  test "show with path should redirect to edit" do
+    get :show, :path => "help", :name => "contact_us"
+    assert_redirected_to edit_page_url(:path => "help", :name => "contact_us")
+  end
+
   test "should edit existing page" do
     get :edit, :name => @page.name
     assert_response :ok
