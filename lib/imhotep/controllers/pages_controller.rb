@@ -18,7 +18,7 @@ module Imhotep
     def update
       resource.attributes = params[:page]
       resource.save
-      respond_with(resource, :location => { :action => 'show' })
+      respond_with(resource, :location => redirect_location)
     end
 
     def destroy
@@ -27,6 +27,10 @@ module Imhotep
     end
 
     protected
+      def redirect_location
+        { :action => 'show' }
+      end
+
       def resource
         @page ||= if request.delete?
           resource_class.find_by_path_and_name(params[:path], params[:name])
