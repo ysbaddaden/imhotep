@@ -51,7 +51,7 @@ begin
     gem.authors = ['Julien Portalier']
     gem.files = root_files + FileList["{lib}/*"] + FileList["{lib}/**/*"]
     gem.extra_rdoc_files = root_files
-    gem.add_dependency 'rails', '~> 3.0.7'
+    gem.add_dependency 'rails', '>= 3.0'
   end
 
   Jeweler::GemcutterTasks.new
